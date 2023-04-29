@@ -10,6 +10,7 @@ class Recipe(ConanFile):
 
     def requirements(self):
         self.requires("fmt/9.1.0")
+        self.requires("jsoncpp/1.9.5")
 
     def build_requirements(self):
         self.test_requires("catch2/3.3.1")

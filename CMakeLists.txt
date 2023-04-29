@@ -24,12 +24,14 @@ target_include_directories(
     json-playground_lib ${warning_guard}
     PUBLIC
     "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/source>"
+    JsonCpp::JsonCpp
 )
 
 target_compile_features(json-playground_lib PUBLIC cxx_std_17)
 
 find_package(fmt REQUIRED)
-target_link_libraries(json-playground_lib PRIVATE fmt::fmt)
+find_package(jsoncpp REQUIRED)
+target_link_libraries(json-playground_lib PRIVATE fmt::fmt JsonCpp::JsonCpp)
 
 # ---- Declare executable ----
 

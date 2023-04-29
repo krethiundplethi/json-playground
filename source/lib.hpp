@@ -15,7 +15,7 @@ struct library
   /**
    * @brief Simply initializes the name member to the name of the project
    */
-  library();
+  library(std::string file);
 
   std::string name;
 };

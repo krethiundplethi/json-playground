@@ -4,6 +4,6 @@
 
 TEST_CASE("Name is json-playground", "[library]")
 {
-  auto const lib = library {};
+  auto const lib = library {"test.json"};
   REQUIRE(lib.name == "json-playground");
 }
